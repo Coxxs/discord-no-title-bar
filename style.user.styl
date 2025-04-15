@@ -1,0 +1,31 @@
+/* ==UserStyle==
+@name         Discord No Title Bar
+@version      1.0.0
+@namespace    discord-no-title-bar
+@description  Remove Discord Title Bar
+@author       Coxxs
+@license      MIT
+==/UserStyle== */
+
+@-moz-document url-prefix("https://discord.com/") {
+/* Remove top bar */
+.visual-refresh { --custom-app-top-bar-height: 0px }
+
+/* Preserve inbox button */
+.visual-refresh .trailing_c38106 { position: absolute; top: 8px; right: 10px; z-index: 101; }
+
+/* Provide some space for the inbox */
+.visual-refresh .toolbar__9293f { padding-right: 40px; }
+.visual-refresh .searchBar__1ac1c { margin-right: 35px; }
+
+/* Padding above the Discord icon (top left) */
+.visual-refresh .tutorialContainer__1f388 { padding-top: 8px; }
+
+/* Remove help button */
+.visual-refresh .trailing_c38106 > a.anchorUnderlineOnHover_edefb8 { display: none; }
+
+/* Remove rounded corner and top border */
+.visual-refresh .sidebarListRounded_c48ade { border-top-left-radius: 0; border-top: none }
+.visual-refresh .chat_f75fb0[data-has-border=true] { border-top: none }
+.visual-refresh .container__133bf { border-top: none }
+}
