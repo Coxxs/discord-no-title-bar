@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         Discord No Title Bar
-@version      1.0.5
+@version      1.0.6
 @namespace    discord-no-title-bar
 @description  A simple userstyle that removes Discord's new title bar.
 @author       Coxxs
@@ -26,6 +26,10 @@
 
 /* Remove help button */
 .visual-refresh .trailing_c38106 > a.anchorUnderlineOnHover_edefb8 { display: none }
+
+/* Remove buttons other than inbox */
+.visual-refresh .trailing_c38106 > div[aria-label] { display: none }
+.visual-refresh .trailing_c38106 > div.clickable_c99c29 { display: flex }
 
 /* Remove rounded corner and top border */
 .visual-refresh .sidebarListRounded_c48ade { border-top-left-radius: 0 !important; border-top: none !important } /* 2025-04-15 */
